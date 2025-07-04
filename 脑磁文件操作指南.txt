@@ -1,0 +1,3 @@
+1. 脑磁设备原始数据为mat格式，经格式转换后得到bst文件，该文件可使用brainstorm软件打开。同时以record为开头的标签文件记录了所有运动想象的标签类型，后续需要根据此文件转换标签信息。
+2. 使用brainstorm加载bst格式文件后，在该文件的详情页可以找到对应的mat文件地址。将该地址传入bstExtractRawData.m脚本并运行该脚本，可以得到原始的数据信息，并将结果缓存在matlab的raw_data变量中。
+3. 在完成上述操作后，使用拼接好的record的文件(即将一次实验所有block的标签信息整合在同一个record文件中)并执行对应的generateMegLabelData.m脚本，该脚本将从第二步得到的raw_data变量的Trigger通道获取事件标签时间点，并根据record.txt文件整合成一组带标签的原始数据。最终将在record.txt文件相同路径下找到converted_meg_data.mat。
