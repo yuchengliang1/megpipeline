@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
             '''Example for loading SHU Dataset '''
             dataset_details={
-                'data_path' : r'SHU_Dataset',
+                'data_path' : r'C:\Users\yu\Desktop\MEGPipeline\FBCSP_RAW_FILE\FBCSP\FBCSP\XW_MEG_Dataset',
                 'file_to_load': subj,
                 'ntimes': 1,
                 'kfold':10,

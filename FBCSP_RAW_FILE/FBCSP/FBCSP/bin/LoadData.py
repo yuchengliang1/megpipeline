@@ -37,7 +37,7 @@ class loadSHU:
         self.fs=250
     def get_epochs(self):
         data,labels=get_data(self.path,self.id)
-        # data=data.transpose(1,2,0)
+        data=data.transpose(2,0,1)
         eeg_data = {'x_data': data,
                     'y_labels': labels-1,
                     'fs': self.fs,
