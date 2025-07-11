@@ -5,7 +5,7 @@ py_data = mneObj.get_data();
 raw_data = double(py.numpy.array(py_data));
 
 
-
+% mneObj.save('your_filename.fif', overwrite=True)
 % data_type = char(py.str(py_data.dtype));  % 先转为Python字符串，再转为MATLAB字符
 % data_shape = py.tuple(py_data.shape);  % 获取形状元组
 % disp(['原始数据类型: ', data_type]);
